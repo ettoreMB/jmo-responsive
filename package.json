@@ -1,0 +1,32 @@
+{
+  "name": "jmo-responsive",
+  "version": "1.0.0",
+  "description": "JMO",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm-run-all -p nodemon browsersync",
+    "nodemon": "nodemon node src/server.js",
+    "browsersync": "browser-sync start --proxy http://localhost:5000 --files 'public, src/app/views'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ettoreMB/jmo-responsive.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "nodemon": "^2.0.7",
+    "npm-run-all": "^4.1.5"
+  },
+  "bugs": {
+    "url": "https://github.com/ettoreMB/jmo-responsive/issues"
+  },
+  "homepage": "https://github.com/ettoreMB/jmo-responsive#readme"
+}
