@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  border: none;
+  line-height:1.6em;
+  font-size: 100%;
+  font-family: 'Libre Baskerville', serif;
+}
+
+body {
+  min-height: 100vh;
+  background: url(../images/graphic/layout/BG.jpg);
+
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+}
+
+header .logo {
+  height: 100%;
+  width: 100%;
+}
