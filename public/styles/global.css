@@ -1,3 +1,7 @@
+:root {
+  --menu-color: #5f2e24;
+}
+
 * {
   margin: 0;
   padding: 0;

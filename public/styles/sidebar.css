@@ -2,5 +2,5 @@ aside.sidebar {
  min-height: 100vh;
  float: left;
  width: 15%;
- background-color: blue;
+ background-color:var(--menu-color);
 }

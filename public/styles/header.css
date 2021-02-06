@@ -7,3 +7,7 @@ header .logo {
   height: 100%;
   width: 100%;
 }
+
+header .header-menu {
+  background-color: var(--menu-color);
+}
