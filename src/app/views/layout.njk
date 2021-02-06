@@ -13,13 +13,12 @@
 
     <div class="wrapper">
     {% include "parts/sidebar.njk" %}
-
-      {% block content %}
-      
-      {% endblock %}
+      <main>
+        {% block content %}
+        {% endblock %}
+      </main>
     </div>
     
-
   {% include "parts/footer.njk" %}
 <!-- /.wrapper -->
 </body>
