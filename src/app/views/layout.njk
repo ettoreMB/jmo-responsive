@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  {% include "styles.njk" %}
+  <title>Document</title>
+</head>
+<body>
+  
+    {% include "parts/header.njk" %}
+
+    <div class="wrapper">
+    {% include "parts/sidebar.njk" %}
+
+      {% block content %}
+      
+      {% endblock %}
+    </div>
+    
+
+  {% include "parts/footer.njk" %}
+<!-- /.wrapper -->
+</body>
+</html>
