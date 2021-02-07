@@ -1,5 +1,6 @@
 :root {
   --menu-color: #5f2e24;
+  --title-background: #a21716
 }
 
 * {
@@ -9,14 +10,16 @@
   text-decoration: none;
   list-style-type: none;
   border: none;
-  line-height:1.6em;
-  font-size: 100%;
-  font-family: 'Libre Baskerville', serif;
+  font-weight: normal;
 }
 
 body {
   min-height: 100vh;
   background: url(../images/graphic/layout/BG.jpg);
+  color: #fff;
+  line-height:1.6em;
+  font-size: 100%;
+  font-family: 'Libre Baskerville', serif;
 
 }
 
@@ -28,4 +31,29 @@ body {
 main{
   background-color: white;
   height: 100vh;
+}
+
+
+.title {
+  width: 100%;
+  background-color: var(--menu-color);
+  height: 28px;
+  border-bottom: 3px solid #a5727c;
+  
+}
+
+.title > h3 {
+  background-color: var(--title-background) ;
+  opacity: 0.9;
+  display: inline-block;
+  padding: 8px 10px;
+  margin-left: 6px;
+  margin-top: 4px;
+  font-size: 20px;
+}
+
+main {
+  padding: 20px 22px;
+  min-height: 100vh;
+  width: 894px;
 }
