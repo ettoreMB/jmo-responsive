@@ -48,3 +48,11 @@ aside .sidebar-menu {
 .sidebar-links ul li a{
   font-size: 14px;
 }
+
+
+section.sidebar-banners .advert {
+  width: 212px;
+  height: 239px;
+  background-color: #a21716;
+  margin-top: 10px;
+}
