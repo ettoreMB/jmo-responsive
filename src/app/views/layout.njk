@@ -10,16 +10,19 @@
 <body>
   
     {% include "parts/header.njk" %}
+    <div class="clear"></div>
 
     <div class="wrapper">
-    {% include "parts/sidebar.njk" %}
-      <main>
-        {% block content %}
-        {% endblock %}
-      </main>
+      <div class="content">
+        {% include "parts/sidebar.njk" %}
+        <main>
+          {% block content %}
+          {% endblock %}
+        </main>
+      </div>
+      <div class="clear"></div>
     </div>
-    
+
   {% include "parts/footer.njk" %}
-<!-- /.wrapper -->
 </body>
 </html>

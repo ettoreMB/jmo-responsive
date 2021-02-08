@@ -3,7 +3,7 @@ header {
   display: grid;
   grid-template-rows: 2fr;
   margin-bottom: 30px;
-  
+  padding-top: 30px;
 }
 
 header .header-upside {
@@ -21,9 +21,13 @@ header .header-menu {
   margin-top: 20px;
   background-color: var(--menu-color);
   height: 50px;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/images/graphic/layout/menu_home.png);
 }
 
 header .header-menu ul li a {
   color: #fff;
+  margin-left: 23px;
 }

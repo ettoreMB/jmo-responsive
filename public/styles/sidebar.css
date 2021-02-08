@@ -1,6 +1,50 @@
-aside.sidebar {
- min-height: 100vh;
- float: left;
- width:212px;
- background-color:var(--menu-color);
+aside {
+  min-height: 100vh;
+  float: left;
+  width:212px;
+  
+}
+
+aside .sidebar-menu {
+ padding-top: 30px;
+ display: block;
+ background-color: var(--menu-color);
+ display: flow-root;
+}
+
+
+
+.sidebar-title {
+  text-transform: uppercase;
+  margin-left: -20px;
+  width: 245px;
+  padding: 8px 0;
+  padding-right: 12px;
+  text-align: right;
+  color: #fff;
+  font-size: 18px;
+  border-bottom: 3px solid #282828;
+  clear: both;
+  height: 39px;
+  margin-bottom: 20px;
+  background: url(/images/graphic/layout/sideBarTittleBG.png) no-repeat;
+}
+
+.sidebar-links ul {
+  float: right;
+  text-align: right;
+  margin-bottom: 40px;
+  padding-right: 20px;
+}
+
+.sidebar-links ul li {
+  width: 170px;
+  min-width: 170px;
+  padding-bottom: 7px;
+  margin-top: 7px;
+  border-bottom: 3px solid #fff
+}
+
+.sidebar-links ul li a{
+  font-size: 14px;
 }
