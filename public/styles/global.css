@@ -42,8 +42,9 @@ main {
   float: right;
 }
 
-.title {
+main .title {
   width: 100%;
+  margin-bottom: 20px;
   background-color: var(--menu-color);
   height: 28px;
   border-bottom: 3px solid #a5727c;
@@ -55,8 +56,70 @@ main {
   opacity: 0.9;
   display: inline-block;
   padding: 8px 10px;
-  margin-left: 6px;
-  margin-top: 4px;
+  margin: 0 0 8px 4px;
   font-size: 20px;
 }
 
+main section{
+  margin-bottom: 20px ;
+}
+
+main #main-featured img {
+  width: 100%;
+  box-shadow: 0 0 5px 0px #666;
+  margin: 0 auto;
+}
+.card {
+  box-shadow: 0px 0px 6px -2px rgb(0 0 0 / 50%);
+  margin-bottom: 20px;
+  min-height: 100px;
+  padding-top: 15px;
+  padding-left: 10px;
+  
+}
+
+ .card .card-title h2{
+  font-size: 24px;
+  color: black;
+  text-transform: uppercase;
+}
+
+.card .card-body {
+  font-size: 18px;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.card .card-body a {
+  color: black;
+  transition: 0.3;
+}
+
+.card .card-body a:hover {
+  color: var(--menu-color);
+  border-bottom: 2px solid var(--menu-color);
+  font-weight: bold ;
+  
+}
+
+/*album*/
+
+ .album-photos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  gap: 20px
+}
+
+ .album-photos .photo {
+  width: 187px;
+  max-height: 145px;
+  box-shadow: 0px 0px 6px 0px rgb(0 0 0 / 50%);
+  overflow: hidden;
+  
+}
+
+.album-photos .photo img {
+  width: 100%;
+  
+}

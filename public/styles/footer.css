@@ -1,6 +1,24 @@
+.w100 {
+  width: 100px;
+}
+
 footer {
   width: 100%;
   background-image: url(/images/graphic/layout/footer_mountain.png);
+}
+
+.footer-title {
+  margin-bottom: 5px; 
+}
+
+.footer-title span {
+  
+  border-bottom: #fff 1px solid;
+}
+
+.footer-top img ,
+.footer-down img {
+  margin-right: 10px ;
 }
 
 footer .muleiro {
@@ -16,7 +34,6 @@ footer .redRibbon {
   height: 230px;
   background: url(/images/graphic/layout/footer_red_ribbon.jpg) repeat-x;
   padding: 20px 20px;
-  text-align: center;
   color: #fff;
 }
 
@@ -28,12 +45,24 @@ footer .redRibbon .footer-content {
   border-right: 5px solid #fff;
 }
 
-footer .redRibbon .footer-content .footer-left {
-  width: 50%;
-    height: 50%;
-    display: inline-grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 5% 0;
-    float: left;
-    gap: 20px 0;
+footer .redRibbon .footer-content .footer-top {
+  width:50%;
+  height: 100%;
+  float: left;
+  display: grid;
+  align-content: space-around;
+  justify-items: center;
+  grid-template-columns: 2fr 2fr;
+
+  
 }
+
+footer .redRibbon .footer-content .footer-down {
+  width: 50%;
+  height: 100%;
+  float: right;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+}
+
