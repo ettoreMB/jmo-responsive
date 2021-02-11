@@ -22,9 +22,9 @@ footer {
 }
 
 footer .muleiro {
-  background-image: url(/images/graphic/layout/footer_muladeiro.png);
-  width: 1249px;
-  height: 657px;
+  background: url(/images/graphic/layout/footer_muladeiro.png) no-repeat center;
+  width: 100%;
+  height: 68vh;
   margin: 0 auto;
   margin-bottom: 2px;
 }

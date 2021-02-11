@@ -1,0 +1,45 @@
+@media screen and (max-height: 450px) {
+  /*SIDENAV*/
+  .sideNav {padding-top: 15px;}
+  .sideNav a {font-size: 18px;}
+  /*SIDENAV END*/
+}
+
+
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  .content {
+    margin-right: 10px;
+  }
+
+  main{
+    width: 78%;
+    float: right;
+    margin: 0 5px;
+  }
+  /*SIDE-MENU*/
+  aside {width: 20%;}
+  .sidebar-title{ 
+    margin-left: 1px; 
+    width: 100%;
+    background-color: rgb(187,45,41);
+    text-align: center;
+  }
+  .sidebar-links {
+    width: 90%;
+    
+  }
+  .sidebar-links ul li a {
+    font-size: 12px;
+  }
+  /*SIDE-MENU END*/
+
+  /*FOOTER*/
+  footer .muleiro {
+    height: 90vh;
+  }
+  /*FOOTER-END*/
+}
