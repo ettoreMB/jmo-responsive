@@ -1,12 +1,10 @@
-@media screen and (max-height: 450px) {
-  /*SIDENAV*/
-  .sideNav {padding-top: 15px;}
-  .sideNav a {font-size: 18px;}
-  /*SIDENAV END*/
+.header-menu span {
+  display: none;
 }
 
 
-@media screen and (max-width: 1024px) {
+
+@media screen and (max-width: 1075px) {
   .wrapper {
     width: 100%;
   }
@@ -14,6 +12,12 @@
   .content {
     margin-right: 10px;
   }
+
+  .header-menu span {
+    display: none;
+  }
+
+
 
   main{
     width: 78%;
@@ -42,4 +46,64 @@
     height: 90vh;
   }
   /*FOOTER-END*/
+}
+
+@media screen and (max-width:670px) {
+  header .header-upside {
+    margin: 0;
+  }
+
+  header nav ul {
+    display: none;
+  }
+
+  header .header-menu {
+    justify-content: end;
+    padding-left: 20px;
+  }
+
+  .header-menu span {
+    display: block;
+  }
+
+  .phoneMenu { 
+    display: flex;
+    margin-left: 10px;
+    font-size: 28px;
+  }
+ 
+  .social-links {
+    display: none;
+  }
+
+  aside {
+    min-height: unset;
+    display: none;
+  }
+
+  main {
+    width: 99%;
+    margin: 0;
+  }
+
+  main .title {
+    height: unset;
+  }
+
+  .title > h3 {
+    width: 100%;
+    margin: 0;
+  }
+  .album-photos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  footer .muleiro {
+    background-repeat: no-repeat;
+    background-position: initial;
+  }
+
+  footer .redRibbon .footer-content {
+    width: 100%;
+  }
 }

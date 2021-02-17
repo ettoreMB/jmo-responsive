@@ -50,9 +50,10 @@ aside .sidebar-menu {
 
 
 section.sidebar-banners .advert {
-  width: 212px;
-  height: 239px;
-  background-color: #a21716;
   margin-top: 10px;
 }
+
+section.sidebar-banners img {
+  width: 100%;
+} 
 

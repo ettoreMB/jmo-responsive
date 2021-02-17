@@ -112,7 +112,6 @@ main #main-featured img {
 }
 
  .album-photos .photo {
-  width: 187px;
   max-height: 145px;
   box-shadow: 0px 0px 6px 0px rgb(0 0 0 / 50%);
   overflow: hidden;
