@@ -2,9 +2,14 @@
   display: none;
 }
 
+@media screen and (max-width: 1230px) {
+  footer .redRibbon .footer-content {
+    width: 80%;
+  }
+}
 
 
-@media screen and (max-width: 1075px) {
+@media screen and (max-width: 1076px) {
   .wrapper {
     width: 100%;
   }
@@ -16,8 +21,6 @@
   .header-menu span {
     display: none;
   }
-
-
 
   main{
     width: 78%;
@@ -43,8 +46,20 @@
 
   /*FOOTER*/
   footer .muleiro {
-    height: 90vh;
+    height: 75vh;
   }
+
+  footer .redRibbon .footer-content .footer-top {
+    width: 25%;
+    grid-template-columns: 1fr;
+  }
+
+  footer .redRibbon .footer-content .footer-down {
+    width: 75%;
+  }
+
+
+  
   /*FOOTER-END*/
 }
 
@@ -103,7 +118,47 @@
     background-position: initial;
   }
 
+  footer .redRibbon {
+    padding: 10px 10px;
+    height: 60vh;
+    background-repeat: repeat-y;
+  }
+
   footer .redRibbon .footer-content {
     width: 100%;
+  }
+
+  footer .redRibbon .footer-content .footer-top,
+  footer .redRibbon .footer-content .footer-down {
+    width: 100%;
+  }
+
+  footer .redRibbon .footer-content .footer-top {
+    align-content: unset;
+    grid-template-columns: 1fr;
+    height: unset;
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+
+  footer .redRibbon .footer-content .footer-down {
+    float: unset;
+    display: unset;
+  }
+
+  footer .redRibbon .footer-content .footer-down .parceiros {
+    display: grid;
+    justify-items: center;
+    grid-template-rows: 1fr;
+    float: left;
+    width: 50%;
+  }
+
+  footer .redRibbon .footer-content .footer-down .criadouros {
+    display: grid;
+    justify-items: center;
+    grid-template-rows: 1fr;
+    float: left;
+    width: 50%;
   }
 }
