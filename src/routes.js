@@ -26,4 +26,8 @@ routes.get('/contato', (req,res) => {
   return res.render('pages/contato')
 })
 
+routes.get('/admin', (req,res) => {
+  return res.render('pages/admin/index')
+})
+
 module.exports = routes
