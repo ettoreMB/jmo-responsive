@@ -1,0 +1,9 @@
+{% extends "adminLayout.njk" %}
+
+{% block content %}
+  <form action="POST" method="post">
+    {% include 'pages/admin/artigos/article/fields.njk' %}
+
+    <button type="submit">Salvar</button>
+  </form>
+{% endblock %}

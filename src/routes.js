@@ -30,4 +30,9 @@ routes.get('/admin', (req,res) => {
   return res.render('pages/admin/index')
 })
 
+routes.get('/admin/post/create', (req,res) => {
+  return res.render('pages/admin/artigos/article/create')
+})
+
+
 module.exports = routes
