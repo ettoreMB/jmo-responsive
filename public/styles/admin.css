@@ -1,3 +1,5 @@
+/*SIDE NAV*/
+
 .bd-layout {
   display: grid;
   grid-template-areas: "sidebar main";
@@ -7,27 +9,60 @@
 
 .bd-sidebar {
   grid-area: sidebar;
+  border-right: 0.5px solid rgba(0,0,0,0.2); 
 }
 .bd-links {
-  display:block !important
+  display:block !important;
+  
 }
 
 .bd-links .btn {
+  padding: .30rem 3rem;
   border: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+
 }
 
-.dropdown, .droped, .dropstart, .dropup {
-  position: relative;
+.bd-links a {
+  padding: .1875rem 2.5rem;
+  margin-left: 1.25rem;
+  text-decoration: none;
+  margin-top: .125rem;
+  font-size: 1.2rem;
 }
 
 .bd-navbar .dropdown-menu {
   font-size: .875rem;
 }
 
-.bd-subnavbar .dropdown-item.current {
-  font-weight: 600;
+/*SIDE NAV END */
 
-  background-repeat: no-repeat;
-  background-position: right 1rem top 0.6rem;
-  background-size: .75rem .75rem;
+.bd-main {
+  grid-area: main;
+  min-height: 100vh;
+  padding: .875rem 2rem;
 }
+
+.bd-main > h1 {
+  margin-bottom: 2rem;
+}
+
+.section-index {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr ;
+}
+
+.section-index > div {
+  margin-bottom: .50rem;
+  font-weight: 550;
+  font-size: 1rem;
+}
+
+.section-index > div > a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+} 
+
