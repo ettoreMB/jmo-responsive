@@ -1,0 +1,46 @@
+{% extends "adminLayout.njk" %}
+
+{% block content %}
+  <div class="d-grid gap-2 mb-3">
+    <a href="/admin/artigos/create"class="btn btn-primary btn-lg">
+      Adicionar Artigo +
+    </a>
+  </div>
+  
+
+  <table class="table table-striped table-hover ">
+    <thead class="bg-secondary">
+      <tr>
+        <th scope="col">Título</th>
+        <th scope="col">Categoria</th>
+        <th scope="col">Grupo</th>
+        <th scope="col">Destacado</th>
+        <th scope="col">Publicação</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Titulo-ARTIGO</th>
+        <td>Cateogoria Artigo</td>
+        <td>Grupo</td>
+        <td>Destacado</td>
+        <td>2021-02-02</td>
+        <td><a href="" class="btn-sm btn-purple">Editar</a></td>
+      </tr>
+      <tr>
+        <th scope="row">Titulo-ARTIGO</th>
+        <td>Cateogoria Artigo</td>
+        <td>Grupo</td>
+        <td>Destacado</td>
+        <td>2021-02-02</td>
+        <td><a href="" class="btn-sm btn-secondary">Editar</a></td>
+      </tr>
+      
+      
+      
+      
+    </tbody>
+  </table>
+{% endblock %}
+

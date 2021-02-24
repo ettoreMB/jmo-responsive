@@ -17,7 +17,7 @@
 }
 
 .bd-links .btn {
-  padding: .30rem 3rem;
+  padding: .30rem 1.15rem;
   border: 0;
   font-size: 1.5rem;
   font-weight: 500;
@@ -25,7 +25,7 @@
 }
 
 .bd-links a {
-  padding: .1875rem 2.5rem;
+  padding: .1875rem .25rem;
   margin-left: 1.25rem;
   text-decoration: none;
   margin-top: .125rem;
@@ -66,3 +66,33 @@
   font-size: 1.2rem;
 } 
 
+.bd-main .addItem{
+  display: flex;
+  flex: 1;
+  width: 100%;
+}
+
+.bd-main .addItem > div {
+  width: 50%;
+  justify-content: space-between;
+}
+.bd-main .addItem > div a {
+  text-align: end;
+}
+
+table thead {
+  color: white;
+}
+
+table tbody td > a {
+  text-decoration: none;
+}
+
+
+.ck > p {
+  margin: 0 !important;
+}
+
+.ck .ck-content {
+  min-height: 10vh;
+}

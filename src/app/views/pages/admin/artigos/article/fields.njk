@@ -1,25 +1,28 @@
 <div class="item">
-  <div>Titutlo</div>
-    <input type="text" name="post_title">
+  <div class="form-label">Titutlo</div>
+    <input type="text" name="post_title" class="form-control">
   </div>
 
   <div class="item">
-  <div>Descrição</div>
-    <input type="text" name="post_description">
+  <div class="form-label">Descrição</div>
+    <input type="text" name="post_description" class="form-control">
   </div>
 
-  <di id="editor">
-    <textarea name="post_content" id="" cols="30" rows="10"></textarea>
-  </di>
+  <div class="item">
+    <div id="editor">
+      <textarea name="post_content" class="form-control" id="" cols="30"  rows="10"></textarea>
+    </div>
+  </div>
+  
 
   <div class="item">
-    <div>categoria</div>
-    <select value="category">
+    <div class="form-label">categoria</div>
+    <select  class="form-select" value="category">
       <option value="">categoria</option>
     </select>
   </div>
 
   <div class="item">
-    <input type="radio" name="highlight" id="highlight">
-    <label for="highlight">Destacar</label>
+    <input  class="form-check-input" type="checkbox" name="highlight" id="highlight">
+    <label class="form-check-label" for="highlight">Destacar</label>
   </div>
