@@ -15,60 +15,69 @@
 </head>
 
 <body>
-<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="">JMO</a>
-  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <ul class="navbar-nav px-3">
-    <li class="nav-item text-nowrap">
-      <a class="nav-link" href="#">Sign out</a>
-    </li>
-  </ul>
-</header>
+  <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="">JMO</a>
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <ul class="navbar-nav px-3">
+      <li class="nav-item text-nowrap">
+        <a class="nav-link" href="#">Sign out</a>
+      </li>
+    </ul>
+  </header>
 
-  <div class="container-fluid">
-    <div class="row">
-      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-        <div class="position-sticky pt-3">
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a href="admin/post/create" class="nav-link active" aria-current="page">
-                Artigos
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="" class="nav-link active" aria-current="page">
-                Eventos
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="" class="nav-link active" aria-current="page">
-                Fotos
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="" class="nav-link active" aria-current="page">
-                Livros
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="" class="nav-link active" aria-current="page">
-                Videos
-              </a>
-            </li>
-          </ul>
-        </div>
+  <main class="container-xxl my-md-4 bd-layout">
+
+    <aside class="bd-sidebar">
+      <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+        <ul class="list-unstyled mb-0 py-3 pt-md-1">
+          <li class="mb-1">
+            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#getting-started-collapse" aria-expanded="false">
+              Artigos
+            </button>
+            <div class="collapse show" id="getting-started-collapse">
+              <ul class="list-unstyled fw-normal pb-1 small">
+                <li>
+                  <a href="" class="d-inline-flex align-items-center rounded">Artigos</a>
+                </li>
+                <li>
+                  <a href="" class="d-inline-flex align-items-center rounded">Categoria dos Artigos</a>
+                </li>
+                <li>
+                  <a href="" class="d-inline-flex align-items-center rounded">Grupo dos Artigos</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="mb-1">
+            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#Events" aria-expanded="false">
+              Artigos
+            </button>
+            <div class="collapse show" id="Events">
+              <ul class="list-unstyled fw-normal pb-1 small">
+                <li>
+                  <a href="" class="d-inline-flex align-items-center rounded">Artigos</a>
+                </li>
+                <li>
+                  <a href="" class="d-inline-flex align-items-center rounded">Categoria dos Artigos</a>
+                </li>
+                <li>
+                  <a href="" class="d-inline-flex align-items-center rounded">Grupo dos Artigos</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
       </nav>
-    </div>
-  </div>
+    </aside>
 
-  <main class="col-md-09 ms-sm-auto col-lg-10 px-md-4">
-    <div class="justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
-      {% block content %}
 
-      {% endblock%}
-    </div>
+  
+        {% block content %}
+
+        {% endblock%}
   </main>
   
 
