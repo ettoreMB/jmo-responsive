@@ -1,4 +1,5 @@
 const express = require('express');
+const ArticleController = require('../app/controllers/ArticleController');
 const routes = express.Router()
 const ArticlesController = require('../app/controllers/ArticleController')
 
@@ -8,9 +9,7 @@ routes.get('/', (req,res) => {
 });
 
 /*Artigos*/
-routes.get('/artigos', (req,res) => {
-  return res.render('pages/admin/artigos/article/index')
-});
+routes.get('/artigos', ArticleController.index);
 routes.get('/artigos/create', (req,res) => {
   return res.render('pages/admin/artigos/article/create')
 });

@@ -20,26 +20,19 @@
       </tr>
     </thead>
     <tbody>
+      
+      {% for article in articles %}
       <tr>
-        <th scope="row">Titulo-ARTIGO</th>
-        <td>Cateogoria Artigo</td>
+        <th scope="row">{{article.title}}</th>
+        <td>Categoria</td>
         <td>Grupo</td>
         <td>Destacado</td>
-        <td>2021-02-02</td>
+        <td>{{article.created_at}}</td>
         <td><a href="" class="btn-sm btn-purple">Editar</a></td>
       </tr>
-      <tr>
-        <th scope="row">Titulo-ARTIGO</th>
-        <td>Cateogoria Artigo</td>
-        <td>Grupo</td>
-        <td>Destacado</td>
-        <td>2021-02-02</td>
-        <td><a href="" class="btn-sm btn-secondary">Editar</a></td>
-      </tr>
+     
       
-      
-      
-      
+    {% endfor %}
     </tbody>
   </table>
 {% endblock %}
