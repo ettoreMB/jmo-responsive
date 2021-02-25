@@ -1,0 +1,26 @@
+{% extends "adminLayout.njk" %}
+
+{% block content %}
+  <form action="/admin/artigos/categorias" method="POST">
+
+    <div class="item">
+      <div class="form-label">Nome</div>
+      <input type="text" name="name" class="form-control">
+    </div>
+
+    <div class="item">
+      <div class="form-label">categoria</div>
+      <select  class="form-select" name="group_id">
+        {% for group in categoriesGroups %}
+          <option value="{{group.id}}"  {% if articles.category_id == group.id %}selected{% endif %}
+          >
+            {{group.name}}
+          </option>
+        {% endfor %}
+       
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-lg">Salvar</button>
+  </form>
+{% endblock %}

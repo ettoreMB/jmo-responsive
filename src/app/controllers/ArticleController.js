@@ -12,6 +12,10 @@ module.exports = {
     }
   },
 
+  create(req, res) {
+    return res.render('pages/admin/artigos/article/create')
+  },
+
  async post(req, res) {
    try {
      let {title,description, post_body, category_id, 
@@ -20,7 +24,7 @@ module.exports = {
 
      category_id = 1
      highlight = true
-     const postId = await Articles.create({
+     const postArticleId = await Articles.create({
        title,
        description,
        post_body, 

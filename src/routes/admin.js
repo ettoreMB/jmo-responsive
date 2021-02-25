@@ -1,7 +1,10 @@
 const express = require('express');
-const ArticleController = require('../app/controllers/ArticleController');
 const routes = express.Router()
-const ArticlesController = require('../app/controllers/ArticleController')
+
+const ArticleController = require('../app/controllers/ArticleController');
+const ArticleGroupController = require('../app/controllers/ArticleGroupController');
+const ArticleCategoryController = require('../app/controllers/ArticleCategoryController');
+
 
 
 routes.get('/', (req,res) => {
@@ -10,18 +13,19 @@ routes.get('/', (req,res) => {
 
 /*Artigos*/
 routes.get('/artigos', ArticleController.index);
-routes.get('/artigos/create', (req,res) => {
-  return res.render('pages/admin/artigos/article/create')
-});
+routes.get('/artigos/create', ArticleController.create);
+routes.post('/artigos/article', ArticleController.post);
 
-routes.get('/artigos/categorias', (req,res) => {
-  return res.render('pages/admin/artigos/category/index')
-});
-routes.get('/artigos/grupo', (req,res) => {
-  return res.render('pages/admin/artigos/group/index')
-});
+routes.get('/artigos/categorias', ArticleCategoryController.index);
+routes.get('/artigos/categorias/create', ArticleCategoryController.create);
+routes.post('/artigos/categorias', ArticleCategoryController.post);
 
-routes.post('/artigos/article', ArticlesController.post)
+routes.get('/artigos/grupos', ArticleGroupController.index);
+routes.get('/artigos/grupos/create', ArticleGroupController.create);
+routes.post('/artigos/grupos', ArticleGroupController.post);
+
+
+
 
 
 /*Eventos*/
