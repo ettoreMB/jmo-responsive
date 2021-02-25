@@ -1,5 +1,6 @@
 const express = require('express');
 const routes = express.Router()
+const ArticlesController = require('../app/controllers/ArticleController')
 
 
 routes.get('/', (req,res) => {
@@ -20,6 +21,8 @@ routes.get('/artigos/categorias', (req,res) => {
 routes.get('/artigos/grupo', (req,res) => {
   return res.render('pages/admin/artigos/group/index')
 });
+
+routes.post('/artigos/article', ArticlesController.post)
 
 
 /*Eventos*/

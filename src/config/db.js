@@ -1,4 +1,4 @@
-cosnt {Poll} = require('pg')
+const {Pool} = require('pg')
 
 module.exports = new Pool({
   user: 'postgres',
