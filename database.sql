@@ -4,7 +4,7 @@ CREATE TABLE "articles" (
   "description" text,
   "article_body" text,
   "category_id" int,
-  "highlight" boolean,
+  "highlight" int,
   "created_at" timestamp DEFAULT CURRENT_TIMESTAMP,
   "updated_at" timestamp DEFAULT CURRENT_TIMESTAMP
 );

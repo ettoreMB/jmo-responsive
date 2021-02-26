@@ -14,6 +14,7 @@ routes.get('/', (req,res) => {
 /*Artigos*/
 routes.get('/artigos', ArticleController.index);
 routes.get('/artigos/create', ArticleController.create);
+routes.get('/artigos/:id/edit', ArticleController.edit);
 routes.post('/artigos/article', ArticleController.post);
 
 routes.get('/artigos/categorias', ArticleCategoryController.index);

@@ -1,28 +1,42 @@
 <div class="item">
   <div class="form-label">Titutlo</div>
-    <input type="text" name="title" class="form-control">
+    <input type="text" name="title" class="form-control" value={{article.title}}>
   </div>
 
   <div class="item">
   <div class="form-label">Descrição</div>
-    <input type="text" name="description" class="form-control">
+    <input type="text" name="description" class="form-control" value="{{article.description}}">
   </div>
 
-  <div class="item">
-    <div id="editor">
-      <textarea name="post_body" class="form-control" id="editor" cols="30"  rows="10"></textarea>
+  <div id="editor">
+        <p>This is some sample content.</p>
     </div>
-  </div>
   
 
   <div class="item" name="">
     <div class="form-label">categoria</div>
-    <select  class="form-select" value="category">
-      <option value="">categoria</option>
-    </select>
+      <select  class="form-select" name="category_id">
+      {% for category in categories %}
+       <option value={{category.id}}>{{category.name}}</option>
+       {% endfor %}
+      </select>
+    
   </div>
 
+
   <div class="item">
-    <input  class="form-check-input" type="checkbox" name="highlight" id="highlight">
-    <label class="form-check-label" for="highlight">Destacar</label>
+    <input  
+      class="form-check-input" 
+      type="checkbox" 
+      name="status"
+      onchange="checkState(this)"
+      {% if article.status == '1' %}
+        checked
+      {% endif %}
+      
+      />
+    <label class="form-check-label">Destacar</label>
   </div>
+
+
+

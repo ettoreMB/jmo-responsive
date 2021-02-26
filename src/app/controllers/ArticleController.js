@@ -1,10 +1,9 @@
 const Articles = require('../models/Articles')
-
+const ArticleCategory = require('../models/ArticleCategory')
 module.exports = {
   async index(req, res) {
     try {
       const articles = await Articles.findAll()
-      console.log(articles)
       return res.render('pages/admin/artigos/article/index', {articles})
       
     } catch (error) {
@@ -12,32 +11,41 @@ module.exports = {
     }
   },
 
-  create(req, res) {
-    return res.render('pages/admin/artigos/article/create')
+  async  create(req, res) {
+    const categories = await ArticleCategory.findAll()
+    return res.render('pages/admin/artigos/article/create', { categories})
   },
 
- async post(req, res) {
-   try {
-     let {title,description, post_body, category_id, 
-      highlight
-    } = req.body
+  async edit(req, res) {
+    const article = await Articles.find(req.params.id)
+    const categories = await ArticleCategory.findAll()
 
-     category_id = 1
-     highlight = true
+    return res.render('pages/admin/artigos/article/edit', {article, categories})
+  },
+
+  async post(req, res) {
+   try {
+     let {
+       title,description,
+       article_body,
+       category_id, 
+       status
+      } = req.body
+
      const postArticleId = await Articles.create({
        title,
        description,
-       post_body, 
+       article_body, 
        category_id ,
-       highlight
+       status: status || 0
      })
 
-     return res.redirect('/admin')
+     return res.redirect('/admin/artigos/create')
      
    } catch (error) {
      console.error(error)
    }
- }
+ },
 
 
 }
