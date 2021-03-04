@@ -1,3 +1,5 @@
+const { text } = require("express");
+
 function openNav() {
   document.getElementById("myTopnav").style.width = "90%"
 }
@@ -6,16 +8,29 @@ function closeNav() {
   document.getElementById("myTopnav").style.width = "0"
 }
 
-var quill = new Quill('#editor-container', {
-  theme: 'snow'
-});
+const editor = new EditorJS({
+  holder: 'editorjs',
+  tools:{
+    header:Header,
+    delimiter: Delimiter,
+    paragraph: {
+     class: Paragraph,
+     inlineToolbar: true,
+   },
+  },
+},
+
+);
 
 
+function saveTextData() {
+    editor.save().then((outputData) => {
+    console.log('Article data: ', outputData)
+  }) .catch((error) => {
+    console.log('Saving failes: ', error)
+  })
 
-function quillGetHTML(inputDelta) {
-  var tempQuill=new Quill(document.createElement("div"));
-  tempQuill.setContents(inputDelta);
-  return tempQuill.root.innerHTML;
+ 
 }
 
 

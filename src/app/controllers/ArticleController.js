@@ -1,7 +1,6 @@
 const Articles = require('../models/Articles')
 const ArticleCategory = require('../models/ArticleCategory')
-const { convertDeltaToHtml, convertTextToDelta, convertHtmlToDelta } = require('node-quill-converter')
-var QuillDeltaToHtmlConverter = require('quill-delta-to-html').QuillDeltaToHtmlConverter;
+
 
 module.exports = {
   async index(req, res) {
@@ -23,24 +22,25 @@ module.exports = {
     const article = await Articles.find(req.params.id)
     const categories = await ArticleCategory.findAll()
 
+   
     return res.render('pages/admin/artigos/article/edit', {article, categories})
   },
 
   async post(req, res) {
    try {
      let {
-       title,description,
-       article_body,
+       title,
+       description,
        category_id, 
-       status
+       status,
+       savedData
       } = req.body
-
-       article_body = JSON.stringify(convertTextToDelta(article_body))
-
+    
+     let article_body = savedData
      const postArticleId = await Articles.create({
        title,
        description,
-       article_body, 
+       article_body,
        category_id ,
        status: status || 0
      })
