@@ -1,5 +1,8 @@
 const Articles = require('../models/Articles')
 const ArticleCategory = require('../models/ArticleCategory')
+const { convertDeltaToHtml, convertTextToDelta, convertHtmlToDelta } = require('node-quill-converter')
+var QuillDeltaToHtmlConverter = require('quill-delta-to-html').QuillDeltaToHtmlConverter;
+
 module.exports = {
   async index(req, res) {
     try {
@@ -31,6 +34,8 @@ module.exports = {
        category_id, 
        status
       } = req.body
+
+       article_body = JSON.stringify(convertTextToDelta(article_body))
 
      const postArticleId = await Articles.create({
        title,

@@ -8,10 +8,13 @@
     <input type="text" name="description" class="form-control" value="{{article.description}}">
   </div>
 
-  <div id="editor">
-        <p>This is some sample content.</p>
-    </div>
+
+<div class="container" id="editor-container">
+  {{article.article_body}}
+</div>
+<div class="container javascript" id="delta-container"></div>
   
+
 
   <div class="item" name="">
     <div class="form-label">categoria</div>
@@ -37,6 +40,8 @@
       />
     <label class="form-check-label">Destacar</label>
   </div>
+
+
 
 
 

@@ -1,5 +1,3 @@
-const { edit } = require("../src/app/controllers/ArticleController");
-
 function openNav() {
   document.getElementById("myTopnav").style.width = "90%"
 }
@@ -8,15 +6,18 @@ function closeNav() {
   document.getElementById("myTopnav").style.width = "0"
 }
 
+var quill = new Quill('#editor-container', {
+  theme: 'snow'
+});
 
-ClassicEditor
-    .create( document.querySelector( '#editor' ) )
-    .then( editor => {
-        console.log( editor );
-    } )
-    .catch( error => {
-        console.error( error );
-    } );
+
+
+function quillGetHTML(inputDelta) {
+  var tempQuill=new Quill(document.createElement("div"));
+  tempQuill.setContents(inputDelta);
+  return tempQuill.root.innerHTML;
+}
+
 
 
 
@@ -26,8 +27,4 @@ function checkState(element) {
   }  else {
     element.value='0'
   }
-  
 }
-  
-
-

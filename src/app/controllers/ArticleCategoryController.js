@@ -1,6 +1,7 @@
 const ArticleCategory = require('../models/ArticleCategory');
 const ArticleGroup = require('../models/ArticleGroup');
 
+
 module.exports = {
   async index(req, res) {
     try {
@@ -23,7 +24,6 @@ module.exports = {
    try {
      let { name, group_id} = req.body
 
-      
 
      const postCategoryId = await ArticleCategory.create({
       name, 
