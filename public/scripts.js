@@ -1,4 +1,4 @@
-const { text } = require("express");
+
 
 function openNav() {
   document.getElementById("myTopnav").style.width = "90%"
@@ -18,9 +18,7 @@ const editor = new EditorJS({
      inlineToolbar: true,
    },
   },
-},
-
-);
+});
 
 
 function saveTextData() {
@@ -29,9 +27,7 @@ function saveTextData() {
   }) .catch((error) => {
     console.log('Saving failes: ', error)
   })
-
- 
-}
+ }
 
 
 

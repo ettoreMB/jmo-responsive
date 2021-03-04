@@ -28,19 +28,19 @@ module.exports = {
 
   async post(req, res) {
    try {
-     let {
+     let article ={
        title,
        description,
        category_id, 
        status,
-       savedData
       } = req.body
-    
-     let article_body = savedData
+
+      textData
+    console.log(article)
      const postArticleId = await Articles.create({
        title,
        description,
-       article_body,
+       article_body: textData,
        category_id ,
        status: status || 0
      })
