@@ -1,5 +1,6 @@
 
 
+
 function openNav() {
   document.getElementById("myTopnav").style.width = "90%"
 }
@@ -21,9 +22,11 @@ const editor = new EditorJS({
 });
 
 
+
 function saveTextData() {
-    editor.save().then((outputData) => {
-    console.log('Article data: ', outputData)
+    editor.save().then((savedData) => {
+      
+    
   }) .catch((error) => {
     console.log('Saving failes: ', error)
   })

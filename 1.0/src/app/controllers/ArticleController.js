@@ -2,6 +2,7 @@ const Articles = require('../models/Articles')
 const ArticleCategory = require('../models/ArticleCategory')
 
 
+
 module.exports = {
   async index(req, res) {
     try {
@@ -28,24 +29,13 @@ module.exports = {
 
   async post(req, res) {
    try {
-     let article ={
-       title,
-       description,
-       category_id, 
-       status,
-      } = req.body
+     let article = {...req.body}
 
-      textData
+     
     console.log(article)
-     const postArticleId = await Articles.create({
-       title,
-       description,
-       article_body: textData,
-       category_id ,
-       status: status || 0
-     })
+    
 
-     return res.redirect('/admin/artigos/create')
+     return res.send(req.body)
      
    } catch (error) {
      console.error(error)

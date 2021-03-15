@@ -1,10 +1,12 @@
+const { json } = require('body-parser')
 const express = require('express')
 const nunjucks = require('nunjucks')
 const routes = require('./routes')
 
 
-const server = express()
 
+const server = express()
+server.use(json())
 server.use(express.urlencoded({extended: true}))
 server.use(express.static('public'))
 server.use(routes)
