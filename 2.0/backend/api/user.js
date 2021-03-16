@@ -60,8 +60,7 @@ module.exports = app => {
         } catch (msg) {
             res.status(500).send('Não foi posivel fazer essa operação')
         }
-        
-            
+           
     }
 
     const getById = (req,res) => {
