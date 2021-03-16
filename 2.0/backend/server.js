@@ -14,5 +14,5 @@ consign()
   .into(app)
 
 app.listen(4000, () => {
-    console.log('Backend executando...')
+    console.log('Backend executando porta 4000')
 })
