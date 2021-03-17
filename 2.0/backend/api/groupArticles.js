@@ -26,5 +26,45 @@ module.exports = app => {
       res.send(error)
     }
   }
-  return { save}
+
+  const get = (req, res) =>{
+    try {
+      app.db('groupArticles')
+      .then(groupArticles => res.json(groupArticles))
+    } catch (error) {
+      res.status(500).send('Não foi posivel fazer essa operação')
+    }
+    
+  }
+
+  const getById = (req, res) => {
+    try {
+      app.db('groupArticles')
+      .where({ id: req.params.id})
+      .first()
+      .then( groupArticle => res.json(groupArticle))
+    } catch (error) {
+      res.status(500).send(error)
+    }  
+
+  }
+
+  const remove = async (req, res) => {
+   try {
+    const categories = await app.db('categories')
+      .where({ groupId: req.params.id })
+      notExistsOrError(categories, 'Categoria possui artigos')
+
+     const rowsDeleted = await app.db('groupArticles')
+      .where({id: req.params.id}).del()
+
+      existsOrError(rowsDeleted, 'Artigo não encontrado')
+      res.status(204).send()
+      
+   } catch (error) {
+    return res.status(400).send(error)
+   }
+      
+  }
+  return { save, get, getById, remove  }
 }

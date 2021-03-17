@@ -42,13 +42,13 @@ module.exports = app => {
 
       req.status(204).send()
     } catch (error) {
-      res.status(400).send(msg)
+      res.status(400).send(error)
     }
   }
 
   const get = (req, res) => {
     try {
-        app.db('caetgories')
+        app.db('categories')
         .select('id', 'name')
         .then(category => res.json(category))
     } catch (msg) {
