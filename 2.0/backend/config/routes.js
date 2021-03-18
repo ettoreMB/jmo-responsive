@@ -35,6 +35,36 @@ module.exports = app => {
     app.route('/adverts/:id')
         .delete(app.api.adverts.remove)
         .get(app.api.adverts.getById)
+        .put(app.api.adverts.save)
+
+    app.route('/events')
+        .post(app.api.events.save)
+        .get(app.api.events.get)
+
+
+    app.route('/events/:id')
+        .delete(app.api.events.remove)
+        .put(app.api.events.save)
+        .get(app.api.events.getById)
+
+    app.route('/books')
+        .post(app.api.books.save)
+        .get(app.api.books.get)
+
+    app.route('/books/:id')
+        .get(app.api.books.getById)
+        .delete(app.api.books.remove)
+        .put(app.api.books.save)
+
+    app.route('/videos')
+        .post(app.api.videos.save)
+        .get(app.api.videos.get)
+
+    app.route('/videos/:id')
+        .get(app.api.videos.getById)
+        .delete(app.api.videos.remove)
+        .put(app.api.videos.save)
+        
         
 
 }
