@@ -29,22 +29,25 @@
         <li><a href="">Artigos</a></li>
       </div>
 
+    <SideMenuAdds />
+
   </aside>
 </template>
 
 <script>
 import SideMenuBlock from './SideMenuBlock.vue';
+import SideMenuAdds from './SideMenuAdds.vue';
 
 export default {
   name: 'SideMenu',
   components: {
-    SideMenuBlock,
+    SideMenuBlock, SideMenuAdds,
   },
 };
 
 </script>
 
-<style>
+<style scope  >
   .sideMenu {
     grid-area: side-menu;
     min-height: 100vh;

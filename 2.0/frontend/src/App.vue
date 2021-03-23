@@ -12,9 +12,12 @@
   border: none;
   text-decoration: none;
 }
+a{
+  text-decoration: none;
+}
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family:'Libre Baskerville', serif;;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

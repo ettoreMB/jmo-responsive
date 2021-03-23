@@ -7,39 +7,31 @@
       <HomeContent />
     </main>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
-import HomeHeader from './template/HomeHeader.vue';
-import SideMenu from './template/Sidemenu/SideMenu.vue';
-import HomeContent from './template/HomeContent.vue';
+import HomeHeader from '@/components/HomeContent/HomeHeader.vue';
+import SideMenu from '@/components/template/Sidemenu/SideMenu.vue';
+import HomeContent from '@/components/HomeContent/HomeContent.vue';
+import Footer from '@/components/template/Footer.vue';
 
 export default {
   name: 'HomePage',
-  components: { HomeHeader, SideMenu, HomeContent },
+  components: {
+    HomeHeader,
+    SideMenu,
+    HomeContent,
+    Footer,
+
+  },
 
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-  }
-a {
-  color: #42b983;
-  }
-
 #home {
   min-height: 100vh;
   background-image: url(../assets/images/graphic/layout/BG.jpg);
