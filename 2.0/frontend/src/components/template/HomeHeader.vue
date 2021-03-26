@@ -11,12 +11,12 @@
     </div>
 
     <div class="header-nav">
-          <a href="/" class="link">HOME</a>
-          <a href="/eventos" class="link">EVENTOS</a>
-          <a href="/fotos" class="link">FOTOS</a>
-          <a href="/videos" class="link">VIDEOS</a>
-          <a href="/livros" class="link">LIVROS</a>
-          <a href="/contato" class="link">CONTATO</a>
+          <router-link to="/" class="link">HOME</router-link>
+          <router-link to="/eventos" class="link">EVENTOS</router-link>
+          <router-link to="/fotos" class="link">FOTOS</router-link>
+          <router-link to="/videos" class="link">VIDEOS</router-link>
+          <router-link to="/livros" class="link">LIVROS</router-link>
+          <router-link to="/contato" class="link">CONTATO</router-link>
     </div>
   </header>
 </template>

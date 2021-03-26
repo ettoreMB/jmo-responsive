@@ -1,5 +1,4 @@
 <template>
-  <main class="content">
     <HomeCard title="Bem vindo">
       <img src="@/assets/images/graphic/layout/banner_home_website.jpg" alt="">
     </HomeCard>
@@ -11,8 +10,6 @@
     <HomeCard title="Artigos em destaque">
       <HomePostCard />
     </HomeCard>
-
-  </main>
 </template>
 
 <script>
@@ -28,13 +25,6 @@ export default {
 </script>
 
 <style scoped >
-  .content {
-    width: 100%;
-    background: #fff;
-    min-height: 100vh;
-    grid-area: content;
-    padding: 20px 22px;
-  }
 
   .content img {
     width: 100%;

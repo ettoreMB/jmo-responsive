@@ -1,12 +1,12 @@
 <template>
-  <div class="admin-home">
-    <h3>Admin</h3>
+  <div class="admin">
+    <h3>Oi</h3>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Admin',
+  name: 'AdminPages',
 };
 </script>
 
