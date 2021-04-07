@@ -5,7 +5,7 @@ module.exports = app => {
   const save = (req, res) => {
     try {
       const events = {...req.body}
-    if(req.params.id) event.id = req.params.id
+    if(req.params.id) events.id = req.params.id
 
     const keys = Object.keys(req.body)
     for(key of keys) {
@@ -18,7 +18,7 @@ module.exports = app => {
 
     if(events.id) {
       app.db('events')
-        .update(event)
+        .update(events)
         .where({ id: events.id})
         .then(_=> res.status(204).send())
         .catch(err => res.status(500).send(err))
@@ -28,15 +28,15 @@ module.exports = app => {
         .then(_ => res.status(204).send())
         .catch(err => res.status(500).send(err))
     }
-    } catch (error) {
-      res.error(error)
+    } catch(error) {
+      res.send(error)
     }
   }
 
   const get = async (req, res) => {
 
     app.db('events')
-      .select('id', 'name', 'description', 'price', 'date')
+      .select('id', 'name', 'city', 'state', 'district', 'adress', 'description', 'price', 'date')
       .then(events => res.json(events))
       .catch(err => res.status(500).send(err))
   }
@@ -53,9 +53,13 @@ module.exports = app => {
     try {
       const rowsDeleted = await app.db('events')
         .where({ id: req.params.id}).del()
-
-        existsOrError(rowsDeleted, 'Evento não foi encontrado.')
-        return res.status(400).send(msg)
+        try {
+          existsOrError(rowsDeleted, 'Evento não foi encontrado.')
+        } catch(msg) {
+          return res.status(400).send(msg)
+        }
+        
+         res.status(204).send()
     } catch (error) {
       res.status(500).send(error)
     }

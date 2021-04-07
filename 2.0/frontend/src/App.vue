@@ -1,39 +1,31 @@
 <template>
   <div id="app">
-    <HomeLayout v-if="this.$route.meta.layout === 'home'"/>
-    <AdminLayout v-if="this.$route.meta.layout === 'admin'" />
+    <AdminLayout />
   </div>
-
 </template>
 
 <script>
-import HomeLayout from './layouts/HomeLayout.vue';
-import AdminLayout from './layouts/AdminLayout.vue';
+import AdminLayout from './components/layout/AdminLayout.vue';
 
 export default {
-  name: 'HomePage',
+  name: 'App',
   components: {
-    HomeLayout,
-    AdminLayout,
-    /* HomeHeader,
-    SideMenu,
-    Footer,
-    HomeContent, */
-  },
-
-};
+    AdminLayout
+  }
+}
 </script>
 
 <style>
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
 
-* {
+*{
   margin: 0;
   padding: 0;
-  border: none;
-  text-decoration: none;
-}
-a{
-  text-decoration: none;
+  box-sizing: border-box;
 }
 
 </style>
