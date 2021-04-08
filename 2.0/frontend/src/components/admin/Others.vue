@@ -5,7 +5,6 @@
       <b-card no-body>
         <b-tabs card>
           <b-tab title="Videos" active>
-            
           </b-tab>
           <b-tab title="Livros"></b-tab>
           <b-tab title="Fotos"></b-tab>
