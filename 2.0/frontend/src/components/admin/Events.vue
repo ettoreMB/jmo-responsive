@@ -64,9 +64,7 @@ export default {
       mode: 'save',
       event: {},
       events: [],
-      fields: [
-        'id', 'name', 'actions'
-      ]
+      fields: [ 'id', 'name', 'actions'],
     }
   },
   methods: {

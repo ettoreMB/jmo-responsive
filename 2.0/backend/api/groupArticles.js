@@ -1,7 +1,7 @@
 module.exports = app => {
-  const { existsOrError, notExistsOrError } = app.api.validation
+  const { existsOrError, notExistsOrError, equalsOrError } = app.api.validation
 
-  const save = (req, res) => {
+  const save = async (req, res) => {
     const groupArticle ={
       id: req.body.id,
       name: req.body.name,
@@ -10,7 +10,13 @@ module.exports = app => {
     if(req.params.id) groupArticle.id == req.params.id
 
     try {
-      existsOrError(groupArticle.name, 'Nome não informado')
+      existsOrError(groupArticle.name, 'Nome não informado');
+
+      const groupFromDB = await app.db('groupArticles')
+        .where({ name: groupArticle.name }).first()
+        if(!groupArticle.id) {
+          notExistsOrError(groupFromDB, 'Este grupo já foi cadastrado')
+        }
 
       if(groupArticle.id) {
         app.db('groupArticles')

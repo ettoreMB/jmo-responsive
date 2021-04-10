@@ -7,6 +7,7 @@ module.exports = app => {
 
     app.route('/groupArticles/:id')
         .get(app.api.groupArticles.getById)
+        .put(app.api.groupArticles.save)
         .delete(app.api.groupArticles.remove)
 
 

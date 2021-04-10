@@ -7,21 +7,24 @@
         <b-form-input  type="text" id="category-name" placeholder="Nome da Categoria"/>
       </b-form-group>
 
-      <b-form-group>
-        <b-form-select />
+      <b-form-group label="Grupo da Categoria" label-for="category-group">
+        <b-form-select id="category-groupId"
+          :options="groups"
+          
+        />
       </b-form-group>
 
       <b-form-group>
     
           <b-button 
             variant="primary"
-            @click="save"
+      
           > Salvar
         </b-button>
 
          <b-button
            variant="danger"
-            @click="remove"
+     
             >Excluir
           </b-button> 
 
@@ -31,7 +34,7 @@
     </b-form>
     <hr>
 
-     <b-table hover striped  :fields="fields">
+     <b-table hover striped  :fields="fields" :items=categories >
             <template  #cell(actions)="row">
                 <b-button variant="warning" @click="loadCategory(row.item)" class="mr-2">
                     <i class="fa fa-pencil"></i>
@@ -46,14 +49,55 @@
 </template>
 
 <script>
+import axios from 'axios'
+import { baseApiUrl} from '@/global';
+
 export default {
   name: 'CategoryTab',
   data() {
     return {
-      fields: ['ID', 'Nome', 'Grupo', 'Ações']
+      mode: 'save',
+      category: {},
+      categories: [],
+      groups: [],
+      fields: [
+        {key:'id', label: 'Id', sortable: true},
+        {key:'name', label: 'Nome', sortable: true},
+        {key: 'group_name', label:'Grupo', sortable: true},
+        {key: 'actions'}
+        ]
     }
-  }
-  
+  },
+  methods: {
+    loadCategories() {
+      const url = `${baseApiUrl}/categories`
+
+      axios.get(url).then(res => 
+        this.categories = res.data
+      )
+    },
+    loadCategory(category, mode = "save") {
+      this.mode = mode
+      this.category = {...category}
+    },
+    loadGroups() {
+      const url = `${baseApiUrl}/groupArticles`
+      axios.get(url).then(res => {
+        this.groups = res.data.map(group => {
+          return {
+            value: group.id,
+            text: group.name
+          }
+          
+        })
+      })
+    },
+    
+  },
+  mounted() {
+    this.loadCategories()
+    this.loadGroups()
+  },
 }
 </script>
 

@@ -47,13 +47,13 @@ module.exports = app => {
   }
 
   const get = (req, res) => {
-    try {
         app.db('categories')
-        .select('id', 'name')
-        .then(category => res.json(category))
-    } catch (msg) {
-        res.status(500).send('Não foi posivel fazer essa operação')
-    }
+        .innerJoin('groupArticles', 'groupArticles.id', 'categories.groupId')
+        .select(['categories.id', 'categories.name', 'categories.groupId', 'groupArticles.name as group_name' ])
+        
+        .then(categories => res.json(categories))
+        .catch(err => res.status(500).send(err))
+      
        
   }
 
